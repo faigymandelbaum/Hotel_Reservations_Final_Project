@@ -1,0 +1,6 @@
+# Files to ignore:
+
+*pyc
+\_\_pycache\_\_
+pycache
+db_info.py

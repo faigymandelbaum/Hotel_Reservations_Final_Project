@@ -1,0 +1,128 @@
+12:12:36,876 root ERROR cannot load wedding file: hotel_bookings.csv
+12:16:46,332 root INFO file loaded successfully .
+12:17:28,419 root INFO file loaded successfully,
+12:18:35,636 root INFO file loaded successfully,
+12:18:41,903 root INFO file loaded successfully,
+12:26:16,754 root ERROR cannot load hotel file: c:\Users\Owner\Documents\Course\A Faigy Mandelbaum Work\Mid Year Project/info/hotel_bookings.csv
+12:29:14,664 root ERROR cannot load hotel file: c:\Users\Owner\Documents\Course\A Faigy Mandelbaum Work\Mid Year Project/info/hotel_bookings.csv
+12:30:08,936 root INFO file loaded successfully,
+12:30:35,353 root INFO file loaded successfully,
+12:47:45,843 root INFO file loaded successfully,
+13:07:57,793 root INFO File loaded successfully.
+13:07:57,889 root INFO column 'is_canceled' converted to bool type.
+13:08:00,625 root INFO column 'arrival_date' converted to bool datetime.
+13:08:12,403 root ERROR Could not convert column 'arrival_date' to datetime.
+13:09:10,911 root ERROR Could not convert column 'arrival_date' to datetime.
+13:09:54,951 root ERROR 'Series' object has no attribute 'arrival_date_year'
+13:10:34,577 root ERROR 'Series' object has no attribute 'arrival_date_year'
+13:10:45,860 root INFO File loaded successfully.
+13:10:45,984 root INFO column 'is_canceled' converted to bool type.
+13:10:49,748 root INFO column 'arrival_date' converted to datetime.
+13:11:20,805 root ERROR 'Series' object has no attribute 'arrival_date_year'
+13:11:55,145 root INFO File loaded successfully.
+13:11:55,250 root INFO column 'is_canceled' converted to bool type.
+13:11:59,395 root INFO column 'arrival_date' converted to datetime.
+13:12:53,918 root ERROR 'Series' object has no attribute 'arrival_date_year'
+13:12:57,622 root ERROR 'Series' object has no attribute 'arrival_date_year'
+13:13:01,286 root INFO File loaded successfully.
+13:13:01,396 root INFO column 'is_canceled' converted to bool type.
+13:13:04,707 root INFO column 'arrival_date' converted to datetime.
+13:13:33,568 root INFO File loaded successfully.
+13:13:33,704 root INFO column 'is_canceled' converted to bool type.
+13:13:37,280 root INFO column 'arrival_date' converted to datetime.
+13:14:37,155 root INFO File loaded successfully.
+13:14:37,343 root INFO column 'is_canceled' converted to bool type.
+13:14:40,968 root INFO column 'arrival_date' converted to datetime.
+13:17:27,458 root INFO File loaded successfully.
+13:17:27,603 root INFO column 'is_canceled' converted to bool type.
+13:17:30,687 root INFO column 'arrival_date' converted to datetime.
+13:17:53,316 root INFO column 'arrival_date' converted to datetime.
+13:18:13,555 root INFO column 'arrival_date' converted to datetime.
+13:18:31,52 root INFO File loaded successfully.
+13:18:31,204 root INFO column 'is_canceled' converted to bool type.
+13:18:35,105 root INFO column 'arrival_date' converted to datetime.
+13:19:19,124 root INFO column 'arrival_date' converted to datetime.
+13:19:44,781 root INFO File loaded successfully.
+13:19:44,944 root INFO column 'is_canceled' converted to bool type.
+13:19:48,460 root INFO column 'arrival_date' converted to datetime.
+13:20:41,233 root INFO File loaded successfully.
+13:20:41,371 root INFO column 'is_canceled' converted to bool type.
+13:20:45,48 root INFO column 'arrival_date' converted to datetime.
+13:22:06,0 root INFO File loaded successfully.
+13:22:06,190 root INFO column 'is_canceled' converted to bool type.
+13:22:52,267 root INFO column 'arrival_date' converted to datetime.
+13:26:52,929 root INFO column 'arrival_date' converted to datetime.
+13:28:08,305 root INFO File loaded successfully.
+13:28:08,466 root INFO column 'is_canceled' converted to bool type.
+13:28:11,514 root INFO column 'arrival_date' converted to datetime.
+13:28:44,984 root INFO File loaded successfully.
+13:28:45,110 root INFO column 'is_canceled' converted to bool type.
+13:28:47,880 root INFO column 'arrival_date' converted to datetime.
+13:29:14,79 root INFO File loaded successfully.
+13:29:14,201 root INFO column 'is_canceled' converted to bool type.
+13:29:16,669 root INFO column 'arrival_date' converted to datetime.
+13:30:27,675 root ERROR 'Series' object has no attribute 'arrival_date_year'
+13:30:41,466 root INFO File loaded successfully.
+13:30:41,567 root INFO column 'is_canceled' converted to bool type.
+13:30:43,940 root INFO column 'arrival_date' converted to datetime.
+13:40:51,757 root INFO column 'arrival_date' converted to datetime.
+13:41:51,681 root INFO column 'direct_booking' created.
+13:42:55,703 root INFO column 'direct_booking' created.
+13:43:30,897 root INFO column 'direct_booking' created.
+13:45:59,630 root INFO column 'direct_booking' created.
+13:49:12,468 root INFO column 'direct_booking' created.
+13:49:24,973 root INFO column 'direct_booking' created.
+10:05:41,961 root INFO File loaded successfully.
+10:05:42,65 root INFO column 'is_canceled' converted to bool type.
+10:05:44,213 root INFO column 'arrival_date' converted to datetime.
+10:05:45,385 root INFO column 'direct_booking' created.
+11:33:27,273 root INFO File loaded successfully.
+11:33:27,400 root INFO column 'is_canceled' converted to bool type.
+11:33:30,150 root INFO column 'arrival_date' converted to datetime.
+11:33:31,969 root INFO column 'direct_booking' created.
+11:44:29,294 root INFO column 'is_repeated_guest' converted to bool type.
+11:58:08,203 root INFO File loaded successfully.
+11:58:08,403 root INFO column 'is_canceled' converted to bool type.
+11:58:15,197 root INFO column 'arrival_date' converted to datetime.
+11:58:18,247 root INFO column 'direct_booking' created.
+11:58:19,681 root INFO column 'is_repeated_guest' converted to bool type.
+12:02:20,614 root INFO File loaded successfully.
+12:02:20,787 root INFO column 'is_canceled' converted to bool type.
+12:02:24,254 root INFO column 'arrival_date' converted to datetime.
+12:02:26,192 root INFO column 'direct_booking' created.
+12:02:27,268 root INFO column 'is_repeated_guest' converted to bool type.
+12:08:24,47 root INFO File loaded successfully.
+12:08:24,197 root INFO column 'is_canceled' converted to bool type.
+12:08:28,125 root INFO column 'arrival_date' converted to datetime.
+12:08:30,96 root INFO column 'direct_booking' created.
+12:09:01,2 root INFO column 'is_repeated_guest' converted to bool type.
+12:25:33,988 root INFO File loaded successfully.
+12:25:34,122 root INFO column 'is_canceled' converted to bool type.
+12:25:37,454 root INFO column 'arrival_date' converted to datetime.
+12:25:39,571 root INFO column 'direct_booking' created.
+12:25:40,612 root INFO column 'is_repeated_guest' converted to bool type.
+13:22:12,452 root INFO File loaded successfully.
+13:22:12,567 root INFO column 'is_canceled' converted to bool type.
+13:22:15,868 root INFO column 'arrival_date' converted to datetime.
+13:22:17,678 root INFO column 'direct_booking' created.
+13:22:18,951 root INFO column 'is_repeated_guest' converted to bool type.
+15:53:55,321 root INFO File loaded successfully.
+15:53:55,587 root INFO column 'is_canceled' converted to bool type.
+15:54:01,576 root INFO column 'arrival_date' converted to datetime.
+15:54:04,920 root INFO column 'direct_booking' created.
+15:54:06,525 root INFO column 'is_repeated_guest' converted to bool type.
+17:18:54,561 root INFO File loaded successfully.
+17:18:55,54 root INFO column 'is_canceled' converted to bool type.
+17:18:59,769 root INFO column 'arrival_date' converted to datetime.
+17:19:04,488 root INFO column 'direct_booking' created.
+17:19:07,372 root INFO column 'is_repeated_guest' converted to bool type.
+17:31:08,242 root INFO File loaded successfully.
+17:31:08,938 root INFO column 'is_canceled' converted to bool type.
+17:31:17,386 root INFO column 'arrival_date' converted to datetime.
+17:31:21,603 root INFO column 'direct_booking' created.
+17:31:23,969 root INFO column 'is_repeated_guest' converted to bool type.
+11:01:15,745 root INFO File loaded successfully.
+11:01:15,905 root INFO column 'is_canceled' converted to bool type.
+11:01:18,374 root INFO column 'arrival_date' converted to datetime.
+11:01:19,620 root INFO column 'direct_booking' created.
+11:01:20,478 root INFO column 'is_repeated_guest' converted to bool type.
