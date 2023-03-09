@@ -3,7 +3,7 @@ import pandas as pd
 import logging
 from sqlalchemy.orm import sessionmaker
 
-import sql.db_info as db_info #this file has the dbinfo:server,db,etc.
+import sqlf.db_info as db_info #this file has the dbinfo:server,db,etc.
 #This class is to connect to the database
 class DbCon:
     def __init__(self):

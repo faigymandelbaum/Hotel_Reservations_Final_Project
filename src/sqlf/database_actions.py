@@ -1,4 +1,4 @@
-from sql.database_connect import DbCon
+from sqlf.database_connect_copy import DbCon
 #from sqlalchemy_utils import database_exists, create_database
 import sqlalchemy
 
@@ -17,3 +17,9 @@ def split_df_reservations(df_reservations):
     df_guests = df_reservations[['GuestId', 'adults','children', 'babies', 'country']]
     df_reservations = df_reservations.drop(columns=['adults','children', 'babies', 'country'])
     return df_guests
+
+def query(sql):
+    db = DbCon()
+    db.Connect()
+    df_result = db.ReadSqlQuery(sql)
+    return df_result
