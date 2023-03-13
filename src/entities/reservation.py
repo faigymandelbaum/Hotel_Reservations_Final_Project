@@ -14,7 +14,7 @@ class Reservation:
         self.n_arrival_date_week_number = reservation_row['arrival_date_week_number']
         self.n_stays_in_weekend_nights = reservation_row['stays_in_weekend_nights'] 
         self.n_stays_in_week_nights = reservation_row['stays_in_week_nights']
-        self.e_meal = MealType[reservation_row['meal']]
+        self.e_meal = MealType[reservation_row['meal'].upper()]
         self.s_market_segment = reservation_row['market_segment']
         self.s_distribution_channel = reservation_row['distribution_channel']
         self.b_is_repeated_guest = reservation_row['is_repeated_guest']
@@ -38,11 +38,6 @@ class Reservation:
         self.o_guest = Guest(reservation_row)
 
     def __str__(self):
-        # attributes = ['s_hotel_name','b_canceled_reservation', 'n_lead_time','n_arrival_week_num','n_num_weekend_nights','n_num_week_nights','s_meal_type','s_market_segment','s_distribution_channel','b_is_repeated_guest','n_previous_cancellations','n_previous_bookings_not_canceled','s_reserved_room_type','s_assigned_room_type','n_booking_changes','s_deposit_type','s_agent_id','s_company','n_days_in_waiting_list','s_customer_type','n_average_daily_rate','n_required_car_parking_spaces','n_total_of_special_requests','s_reservation_status','dt_reservation_status_date','dt_arrival_date','s_direct_booking','n_days_stayed']
-        # s = ''
-        # for attribute in attributes:
-        #     s+=f'{attribute}: {self.attribute}\n'
-        # return s
 
         s=''
         s+=f'Guest: {self.o_guest.__str__()}'

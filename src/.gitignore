@@ -4,3 +4,4 @@
 \_\_pycache\_\_
 __pycache__
 db_info.py
+.gitignore

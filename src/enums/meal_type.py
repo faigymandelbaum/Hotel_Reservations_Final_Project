@@ -6,6 +6,7 @@ class MealType(Enum):
     FB = 2
     HB = 3
     SC = 4
+    UNDEFINED = 5
 
 
 

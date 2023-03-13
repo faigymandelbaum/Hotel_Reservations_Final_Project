@@ -1,4 +1,4 @@
-from sqlf.database_connect_copy import DbCon
+from sqlf.database_connect import DbCon
 #from sqlalchemy_utils import database_exists, create_database
 import sqlalchemy
 

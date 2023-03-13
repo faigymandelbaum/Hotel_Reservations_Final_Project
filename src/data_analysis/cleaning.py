@@ -17,9 +17,20 @@ logging.basicConfig(filename= an.LOG_FILE,
 
 def clean(df_hotels):
 
+    '''
+    This function cleans a dataframe,
+    converts columns into different types and drops and fills columns.
+    
+    Parameters:
+    df_hotels(df): dataframe of hotel information.
+    
+    Returns:
+    df: clean dataframe
+    '''
+
     # Converting is_canceled column into bool column.
     try:
-        df_hotels.is_canceled = df_hotels.is_canceled.map(lambda val: False if val == 0 else True)
+        df_hotels.is_canceled = df_hotels.is_canceled.map(lambda val: True if val == 0 else False)
         logging.info("column 'is_canceled' converted to bool type.")
         df_hotels.is_canceled.dtypes
 
@@ -35,10 +46,10 @@ def clean(df_hotels):
     except Exception as e:
         logging.error(e) 
 
-    # Droping columns: 'arrival_date_year', 'arrival_date_month', 'arrival_date_day_of_month' 
+    # Dropping columns: 'arrival_date_year', 'arrival_date_month', 'arrival_date_day_of_month'. 
     df_hotels.drop(['arrival_date_year', 'arrival_date_month', 'arrival_date_day_of_month'], axis=1, inplace = True)
 
-    # creating a column 'hotel_booking' that has a 'yes' for bookings that weren't done through the agent or a company, and 'no' for the rest.
+    # Creating a column 'hotel_booking' that has a 'yes' for bookings that weren't done through the agent or a company, and 'no' for the rest.
     try:   
         df_hotels['direct_booking'] = df_hotels.apply(lambda row : 'yes' if pd.isnull(row['agent']) and pd.isnull(row['company']) else 'no', axis=1)
         logging.info("column 'direct_booking' created.")
@@ -69,7 +80,7 @@ def clean(df_hotels):
 
     # Converting is_repeated_guest column into bool column.
     try:
-        df_hotels.is_repeated_guest = df_hotels.is_repeated_guest.map(lambda val: False if val == 0 else True)
+        df_hotels.is_repeated_guest = df_hotels.is_repeated_guest.map(lambda val: True if val == 0 else False)
         logging.info("column 'is_repeated_guest' converted to bool type.")
         df_hotels.is_canceled.dtypes
 

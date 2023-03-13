@@ -566,3 +566,207 @@ KeyError: 'Undefined'
 KeyError: 'Undefined'
 'Undefined'
 11:31:26,787 root INFO Ending Application!
+22:38:58,685 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 99, in main
+    if ls_top_agent_reservations.empty:
+AttributeError: 'list' object has no attribute 'empty'
+'list' object has no attribute 'empty'
+22:40:23,562 root ERROR Country not found.
+22:40:46,783 root ERROR Traceback (most recent call last):
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fsf'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'sf'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'sfs'. (207)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 114, in main
+    ls_within_range_reservations = sq.get_reservations_and_guest_from_specific_year_within_range(year, min, max)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 56, in get_reservations_and_guest_from_specific_year_within_range
+    df_results = sqlf.database_actions.query(q_query)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\database_actions.py", line 24, in query
+    df_result = db.ReadSqlQuery(sql)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\database_connect.py", line 47, in ReadSqlQuery
+    df = pd.read_sql_query(query, conn)
+  File "C:\Users\Owner\anaconda3\lib\site-packages\pandas\io\sql.py", line 397, in read_sql_query
+    return pandas_sql.read_query(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\pandas\io\sql.py", line 1560, in read_query
+    result = self.execute(*args)
+  File "C:\Users\Owner\anaconda3\lib\site-packages\pandas\io\sql.py", line 1405, in execute
+    return self.connectable.execution_options().execute(*args, **kwargs)
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1414, in execute
+    return meth(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 485, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 2325, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fsf'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'sf'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'sfs'. (207)")
+[SQL: SELECT *
+    FROM Reservation r
+    JOIN Guest g
+    ON g.GuestId = r.GuestId
+    WHERE YEAR(reservation_status_date) = fsf and adr BETWEEN sf AND sfs and is_canceled != 0;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+(pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fsf'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'sf'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'sfs'. (207)")
+[SQL: SELECT *
+    FROM Reservation r
+    JOIN Guest g
+    ON g.GuestId = r.GuestId
+    WHERE YEAR(reservation_status_date) = fsf and adr BETWEEN sf AND sfs and is_canceled != 0;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+22:41:48,937 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 114, in main
+    ls_within_range_reservations = sq.get_reservations_and_guest_from_specific_year_within_range(year, min, max)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in get_reservations_and_guest_from_specific_year_within_range
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in <listcomp>
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\entities\reservation.py", line 17, in __init__
+    self.e_meal = MealType[reservation_row['meal']]
+  File "C:\Users\Owner\anaconda3\lib\enum.py", line 432, in __getitem__
+    return cls._member_map_[name]
+KeyError: 'Undefined'
+'Undefined'
+22:42:10,853 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 114, in main
+    ls_within_range_reservations = sq.get_reservations_and_guest_from_specific_year_within_range(year, min, max)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in get_reservations_and_guest_from_specific_year_within_range
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in <listcomp>
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\entities\reservation.py", line 17, in __init__
+    self.e_meal = MealType[reservation_row['meal']]
+  File "C:\Users\Owner\anaconda3\lib\enum.py", line 432, in __getitem__
+    return cls._member_map_[name]
+KeyError: 'Undefined'
+'Undefined'
+22:42:29,660 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 114, in main
+    ls_within_range_reservations = sq.get_reservations_and_guest_from_specific_year_within_range(year, min, max)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in get_reservations_and_guest_from_specific_year_within_range
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in <listcomp>
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\entities\reservation.py", line 17, in __init__
+    self.e_meal = MealType[reservation_row['meal']]
+  File "C:\Users\Owner\anaconda3\lib\enum.py", line 432, in __getitem__
+    return cls._member_map_[name]
+KeyError: 'Undefined'
+'Undefined'
+22:44:34,952 root ERROR Traceback (most recent call last):
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'er'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'r'. (207)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 114, in main
+    ls_within_range_reservations = sq.get_reservations_and_guest_from_specific_year_within_range(year, min, max)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 56, in get_reservations_and_guest_from_specific_year_within_range
+    df_results = sqlf.database_actions.query(q_query)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\database_actions.py", line 24, in query
+    df_result = db.ReadSqlQuery(sql)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\database_connect.py", line 47, in ReadSqlQuery
+    df = pd.read_sql_query(query, conn)
+  File "C:\Users\Owner\anaconda3\lib\site-packages\pandas\io\sql.py", line 397, in read_sql_query
+    return pandas_sql.read_query(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\pandas\io\sql.py", line 1560, in read_query
+    result = self.execute(*args)
+  File "C:\Users\Owner\anaconda3\lib\site-packages\pandas\io\sql.py", line 1405, in execute
+    return self.connectable.execution_options().execute(*args, **kwargs)
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1414, in execute
+    return meth(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 485, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 2325, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Owner\anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 747, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'er'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'r'. (207)")
+[SQL: SELECT *
+    FROM Reservation r
+    JOIN Guest g
+    ON g.GuestId = r.GuestId
+    WHERE YEAR(reservation_status_date) = 2106 and adr BETWEEN er AND r and is_canceled != 0;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+(pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'er'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'r'. (207)")
+[SQL: SELECT *
+    FROM Reservation r
+    JOIN Guest g
+    ON g.GuestId = r.GuestId
+    WHERE YEAR(reservation_status_date) = 2106 and adr BETWEEN er AND r and is_canceled != 0;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+22:44:47,176 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 114, in main
+    ls_within_range_reservations = sq.get_reservations_and_guest_from_specific_year_within_range(year, min, max)
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in get_reservations_and_guest_from_specific_year_within_range
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\sqlf\queries.py", line 58, in <listcomp>
+    ls_reservations = [Reservation(row) for index, row in df_results.iterrows()]
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\entities\reservation.py", line 17, in __init__
+    self.e_meal = MealType[reservation_row['meal'].upper()]
+  File "C:\Users\Owner\anaconda3\lib\enum.py", line 432, in __getitem__
+    return cls._member_map_[name]
+KeyError: 'UNDEFINED'
+'UNDEFINED'
+23:14:28,882 root ERROR Invalid menu choice.
+23:33:58,529 root ERROR Country not found.
+23:34:54,178 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 101, in main
+    elif country in countries.keys:
+TypeError: argument of type 'builtin_function_or_method' is not iterable
+argument of type 'builtin_function_or_method' is not iterable
+21:55:24,578 root INFO File loaded successfully.
+21:55:24,578 root INFO column 'is_canceled' converted to bool type.
+21:55:26,308 root INFO column 'arrival_date' converted to datetime.
+21:55:27,105 root INFO column 'direct_booking' created.
+21:55:27,182 root INFO column 'is_repeated_guest' converted to bool type.
+21:58:31,177 root INFO File loaded successfully.
+21:58:31,195 root INFO column 'is_canceled' converted to bool type.
+21:58:32,968 root INFO column 'arrival_date' converted to datetime.
+21:58:33,758 root INFO column 'direct_booking' created.
+21:58:33,823 root INFO column 'is_repeated_guest' converted to bool type.
+21:59:13,713 root ERROR Country not found.
+21:59:21,483 root ERROR Invalid menu choice.
+21:59:32,547 root ERROR Invalid menu choice.
+22:00:54,363 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 101, in main
+    country = countries.get(country).title()
+AttributeError: 'NoneType' object has no attribute 'title'
+'NoneType' object has no attribute 'title'
+22:01:47,661 root ERROR Invalid menu choice.
+22:02:15,302 root ERROR Input not valid.
+22:02:53,261 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 122, in main
+    if len(year) == 4 and year > 2014 and year < 2018 and float(min) and float(max):
+TypeError: '>' not supported between instances of 'str' and 'int'
+'>' not supported between instances of 'str' and 'int'
+22:03:09,469 root ERROR Traceback (most recent call last):
+  File "c:\Users\Owner\Documents\Course\Mid Year Project\Hotel Reservations\src\main.py", line 122, in main
+    if len(year) == 4 and year > 2014 and year < 2018 and float(min) and float(max):
+TypeError: '>' not supported between instances of 'str' and 'int'
+'>' not supported between instances of 'str' and 'int'
+22:04:25,718 root ERROR Input not valid.
